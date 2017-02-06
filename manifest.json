@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "My Cool Extension",
+  "name": "Foogle",
   "version": "0.1",
   "background": {
     "scripts": ["background.js"]
@@ -14,11 +14,11 @@
       "run_at": "document_end"
     }
   ],
+
   "browser_action": {
     "default_icon": "icon.png"
   },
   "web_accessible_resources": [
-    "shrek.gif",
-    "Foogle.png"
+    "shrek.gif"
   ]
 }

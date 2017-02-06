@@ -68,4 +68,5 @@ imageIndex = Math.round(Math.random()*(image.length-1));
 console.log(imageIndex);
 document.getElementById("hplogo").src =image[imageIndex];
 document.getElementById("hplogo").srcset = image[imageIndex];
+document.getElementById("hplogo").width = "255";
 
