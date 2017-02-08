@@ -1,6 +1,6 @@
 // content.js
 
-
+//sets up a listener, which isn't completely necessary for this program, but sets up a foundation for additions to the program
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "clicked_browser_action" ) {
@@ -14,38 +14,6 @@ chrome.runtime.onMessage.addListener(
   }
 );
 
-/**
-hasShrek = false;
-var elements = document.getElementsByTagName('*');
-
-for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
-
-    for (var j = 0; j < element.childNodes.length; j++) {
-        var node = element.childNodes[j];
-
-        if (node.nodeType === 3 || node.nodeTYpe==1) {
-            var text = node.nodeValue;
-            hasShrek=true;
-            var replacedText = text.replace(/somebody/gi, 'someBODY');
-            var replacedText = text.replace(/Somebody/gi, 'someBODY');
-
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-            }
-        }
-    }
-}
-
-
-if(hasShrek==true){
-	$(document).ready(function() {
-	    var cat = chrome.extension.getURL("shrek.gif");
-	    $('img').each(function(index, image){  //this produces "broken" icon
-	        $(image).attr('src', cat);
-	    });
-	});
-}**/
 
 var image = ["https://github.com/meredithcox/Foogle/blob/master/logos/Foogle.gif?raw=true",
 "https://github.com/meredithcox/Foogle/blob/master/logos/Goegel.gif?raw=true", 
@@ -65,8 +33,6 @@ var image = ["https://github.com/meredithcox/Foogle/blob/master/logos/Foogle.gif
 ]
 
 imageIndex = Math.round(Math.random()*(image.length-1));
-console.log(imageIndex);
-document.getElementById("hplogo").src =image[imageIndex];
 document.getElementById("hplogo").srcset = image[imageIndex];
-document.getElementById("hplogo").width = "255";
+document.getElementById("hplogo").height = "110";
 
